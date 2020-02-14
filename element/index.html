@@ -2,11 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport"content="initial-scale=1,maximum-scale=1, minimum-scale=1">
     <title>element</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1637372_amx0s9z7y05.css">
   </head>
+  <style>
+  </style>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <!-- <script src="//at.alicdn.com/t/font_1637372_ktadlcyd5af.js"></script> -->
 </html>
+<script>
+    function gethtmlfontsize(){
+        // 三个步骤:
+        // 1.获取html的宽,
+        let htmlwidth=document.documentElement.clientWidth || document.body.clientWidth;//有些浏览器documentElement获取不到,那就使用后面的body
+        console.log(htmlwidth);
+        
+        // 2.htmlDom
+        let htmlDom=document.getElementsByTagName("html")[0]
+        console.log(htmlDom);
+    
+        //3.设置根元素样式
+        htmlDom.style.fontSize=htmlwidth/3.75+'px';
+    }
+    // 调用一次
+    gethtmlfontsize();
+    // 添加监听事件(resize是监听的意思)
+    window.addEventListener('resize',gethtmlfontsize)
+    </script>
