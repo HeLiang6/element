@@ -203,7 +203,7 @@ export default {
   },
   methods: {
     handTabs (id) {
-      this.num =id
+      this.num = id
     }
   }
 }
@@ -219,7 +219,7 @@ export default {
     overflow-x: auto;
     overflow-y: hidden;
     background: linear-gradient(90deg,#0af,#0085ff);
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
 }
@@ -245,7 +245,15 @@ export default {
     font-size: .12rem;
     color: #fff;
 }
+.main{
+    margin-top: .4rem;
+    padding-top: .4rem;
+}
 .main-nav{
+    position: fixed;
+    top: .4rem;
+    left: 0;
+    background: #fff;
     display: flex;
     justify-content: space-between;
 }
@@ -287,6 +295,7 @@ export default {
     color: #ffffff;
     line-height: .15rem;
     font-size: .12rem;
+    padding: 0 .03rem;
     background: linear-gradient(45deg,#0085ff,#0af);
 }
 .else{

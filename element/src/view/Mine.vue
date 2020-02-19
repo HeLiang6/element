@@ -1,13 +1,13 @@
 <template>
     <div>
-        <div class="top">
+        <router-link to="/ID" tag="div" class="top">
           <div><i class="iconfont icon-element"></i></div>
           <div class="top-content">
             <p>4638e40d7</p>
             <span>188****6279</span>
           </div>
           <i class="iconfont icon-yjt"></i>
-        </div>
+        </router-link>
         <div class="nav">
           <div class="nav-left">
             <strong><i>0</i>个</strong>

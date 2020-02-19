@@ -39,6 +39,9 @@ select {
 * {
   box-sizing: border-box;
 }
+html{
+  font-family: 'Helvetica Neue',Tahoma,Arial,PingFangSC-Regular,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+}
 html,
 body {
   min-height: 100%;

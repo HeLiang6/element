@@ -6,6 +6,9 @@ import Mine from '@/view/Mine'
 import List from '@/view/List'
 import Footer from '@/components/Footer'
 import Cate from '@/components/cate'
+import ID from '@/components/ID'
+import Merchant from '@/components/merchant'
+import Shopping from '@/components/Shopping'
 
 Vue.use(Router)
 
@@ -45,6 +48,21 @@ export default new Router({
       path: '/Cate',
       name: 'Cate',
       component: Cate
+    },
+    {
+      path: '/Shopping',
+      name: 'Shopping',
+      component: Shopping
+    },
+    {
+      path: '/ID',
+      name: 'ID',
+      component: ID
+    },
+    {
+      path: '/Merchant',
+      name: 'Merchant',
+      component: Merchant
     }
   ]
 })

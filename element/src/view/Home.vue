@@ -6,9 +6,11 @@
                 <p>福建省</p>
                 <i class="iconfont icon-xjt"></i>
             </div>
-            <div class="top-search">
-                <i class="iconfont icon-fangdajing"></i>
-                搜索饿了么商家、商品名称
+            <div id="scroll-box">
+            <div class="top-search" :class="headerFixed?'isFixed':''">
+                
+                <span><i class="iconfont icon-fangdajing"></i>搜索饿了么商家、商品名称</span>
+            </div>
             </div>
         </div>
         <div class="nav">
@@ -17,34 +19,34 @@
                     <img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
                     <p>美食</p>
                 </router-link>
-                <li>
-                    <img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
-                    <p>美食</p>
-                </li>
-                <li>
-                    <img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
-                    <p>美食</p>
-                </li>
-                <li>
-                    <img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
-                    <p>美食</p>
-                </li>
-                <li>
-                    <img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
-                    <p>美食</p>
-                </li>
-                <li>
-                    <img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
-                    <p>美食</p>
-                </li>
-                <li>
-                    <img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
-                    <p>美食</p>
-                </li>
-                <li>
-                    <img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
-                    <p>美食</p>
-                </li>
+                <router-link to="/Cate" tag="li">
+                    <img src="https://cube.elemecdn.com/9/21/60ac33f023d9074e13cd78f9b5964jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
+                    <p>夜宵</p>
+                </router-link>
+                <router-link to="/Cate" tag="li">
+                    <img src="https://cube.elemecdn.com/e/58/bceb19258e3264e64fb856722c3c1jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
+                    <p>跑腿代购</p>
+                </router-link>
+                <router-link to="/Cate" tag="li">
+                    <img src="https://cube.elemecdn.com/b/7f/432619fb21a40b05cd25d11eca02djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
+                    <p>汉堡披萨</p>
+                </router-link>
+                <router-link to="/Cate" tag="li">
+                    <img src="https://cube.elemecdn.com/0/1a/314b6da88ab6c7ae9828f91652d40jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
+                    <p>速食简餐</p>
+                </router-link>
+                <router-link to="/Cate" tag="li">
+                    <img src="https://cube.elemecdn.com/7/d6/6f2631288a44ec177204e05cbcb93jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
+                    <p>地方小吃</p>
+                </router-link>
+                <router-link to="/Cate" tag="li">
+                    <img src="https://cube.elemecdn.com/a/7b/b02bd836411c016935d258b300cfejpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
+                    <p>大牌惠吃</p>
+                </router-link>
+                <router-link to="/Cate" tag="li">
+                    <img src="https://cube.elemecdn.com/d/38/7bddb07503aea4b711236348e2632jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed" alt="">
+                    <p>速食简餐</p>
+                </router-link>
             </ul>
         </div>
         <div class="member">
@@ -76,7 +78,7 @@
                 <li>筛选<i class="iconfont icon-shaixuan"></i></li>
             </ul>
             <ul class="main-list">
-                <li>
+                <router-link to="/Merchant" tag="li">
                     <div class="main-list-top">
                         <div class="list-img">
                             <img src="https://cube.elemecdn.com/7/54/55f509fb719da681c58f1b22b38cdpng.png?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed" alt="">
@@ -94,7 +96,8 @@
                         <p><i class="iconfont icon-jian"></i>满38元减3元，满66元减5元，满98元减9元</p>
                         <p><i class="iconfont icon-pei"></i>配送费立减2元</p>
                     </div>
-                </li>
+                </router-link
+                >
                 <li>
                     <div class="main-list-top">
                         <div class="list-img">
@@ -256,28 +259,61 @@
 <script>
 import Footer from '../components/Footer'
 export default {
+  data () {
+    return {
+      headerFixed: 0
+    }
+  },
   components: {
     Footer
+  },
+  mounted () {
+      window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed () {
+      window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+      handleScroll () {
+        let header = document.getElementById('scroll-box');
+        this.offsetTop = header.offsetTop;
+        this.offsetHeight = header.offsetHeight;
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+          // 判断页面滚动的距离是否大于吸顶元素的位置
+        this.headerFixed = scrollTop > (this.offsetTop - this.offsetHeight * 2);
+      }
   }
 }
 </script>
 
 <style scoped>
+  .isFixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 .top{
     background-image: linear-gradient(90deg,#0af,#0085ff);
-    padding: .1rem .14rem;
 }
 .location{
+    margin: 0 .14rem;
     display: flex;
     line-height: .35rem;
     font-size: .18rem;
     color: #ffffff;
 }
 .top-search{
-    margin: 15px 0 0;
+    background-image: linear-gradient(90deg,#0af,#0085ff);
+    padding: .1rem .14rem;
+}
+.top-search span{
+    display: inline-block;
+    width: 3.47rem;
+    margin: 0 auto;
     text-align: center;
     line-height: .36rem;
     background: #ffffff;
+    color: #999;
 }
 .nav ul li{
     width: .75rem;
@@ -294,6 +330,10 @@ export default {
 .nav ul{
     display: flex;
     flex-wrap: wrap;
+}
+.nav ul li p{
+    font-size: .12rem;
+    color: #666;
 }
 .member-box{
     display: flex;

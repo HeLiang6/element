@@ -1,13 +1,13 @@
 <template>
     <div>
         <div class="top">
-          <div class="top-left">
+          <router-link to="/Shopping" tag="div" class="top-left">
             <div class="gold">
               <h3>金币商城</h3>
               <p>0元好物在这你</p>
             </div>
             <img src="https://cube.elemecdn.com/8/38/9c9aea0e856149083d84af3444b78jpeg.jpeg?x-oss-process=image/format,webp" alt="">
-          </div>
+          </router-link>
           <div class="top-right">
             <div class="recommend">
               <div>
@@ -53,7 +53,7 @@
             </li>
           </ul>
           <div class="more">
-            <p>查看更多<i class="iconfont icon-yjt"></i></p>
+            <router-link to="/Shopping" tag="p">查看更多<i class="iconfont icon-yjt"></i></router-link>
           </div>
         </div>
         <Footer/>
