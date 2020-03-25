@@ -1,11 +1,16 @@
 <template>
   <div id="footer">
     <ul>
-      <router-link
-       v-for="(item,index) in tablBars" :key="index" :to="item.path" tag="li">
+      <li
+       v-for="(item,index) in tablBars" :key="index" @click="handerClick(item,index)" :class="{active:current===index}">
         <i v-html="item.icon" class="iconfont"></i>
-        <span>{{item.title}}</span>
-      </router-link>
+        <span>{{item.title}}{{current}}</span>
+      </li>
+      <!-- <ul>
+        <li @click="toggleMenu('home')" :class="{activeStyle:active==='home'}">首页</li>
+        <li @click="toggleMenu('menu')" :class="{activeStyle:active==='menu'}">菜单</li>
+        <li></li>
+      </ul> -->
     </ul>
   </div>
 </template>
@@ -16,6 +21,7 @@ export default {
   data () {
     return {
       current: 0,
+      active: 'home',
       tablBars: [
         {
           icon: '&#xe722',
@@ -41,9 +47,16 @@ export default {
     }
   },
   methods: {
-    handClick (val) {
-      this.current = val
-      console.log(12)
+    toggleMenu (option) {
+      this.active = option
+    },
+    handerClick (val, index) {
+      // console.log(index)
+      this.current = index
+      // // console.log( val.path)
+      this.$router.push({path: val.path})
+      console.log(this.current)
+      // this.$router.push({path: '/home'})
     }
   }
 }
@@ -74,7 +87,13 @@ export default {
 #footer>ul>li>i{
     font-size:.23rem;
 }
-#footer>ul>.router-link-active{
+/* #footer>ul>.router-link-active{
     color:#0089dc;
+} */
+.activeStyle{
+  background: gray;
+}
+.active{
+  color: #0089dc;
 }
 </style>

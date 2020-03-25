@@ -252,20 +252,15 @@
                 </li>
             </ul>
         </div>
-        <Footer/>
     </div>
 </template>
 
 <script>
-import Footer from '../components/Footer'
 export default {
   data () {
     return {
       headerFixed: 0
     }
-  },
-  components: {
-    Footer
   },
   mounted () {
       window.addEventListener('scroll', this.handleScroll)

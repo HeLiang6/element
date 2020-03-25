@@ -9,16 +9,14 @@ import Cate from '@/components/cate'
 import ID from '@/components/ID'
 import Merchant from '@/components/merchant'
 import Shopping from '@/components/Shopping'
-
 Vue.use(Router)
 
+const VueRouterPush = Router.prototype.push
+Router.prototype.push = function push (to) {
+  return VueRouterPush.call(this, to).catch(err => err)
+}
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
     {
       path: '/Home',
       name: 'Home',
@@ -63,6 +61,11 @@ export default new Router({
       path: '/Merchant',
       name: 'Merchant',
       component: Merchant
+    },
+    {
+      path: '/',
+      name: 'Home',
+      component: Home
     }
   ]
 })

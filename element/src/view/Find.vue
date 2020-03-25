@@ -56,16 +56,10 @@
             <router-link to="/Shopping" tag="p">查看更多<i class="iconfont icon-yjt"></i></router-link>
           </div>
         </div>
-        <Footer/>
     </div>
 </template>
 <script>
-import Footer from '../components/Footer'
-export default {
-  components: {
-    Footer
-  }
-}
+export default {}
 </script>
 
 <style scoped>
